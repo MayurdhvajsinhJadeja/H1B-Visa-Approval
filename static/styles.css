@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 95vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  background: linear-gradient(123deg, #99d1f7, #43f1a3);
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-left: 335px;
+  margin-top: 10px;
+  max-height: 670px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container2 {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-left: 335px;
+  margin-top: 200px;
+  max-height: 300px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+form .button {
+  height: 45px;
+  margin: 20px 0
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #262d31, #212925);
+}
+
+form .button input:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #75fbd9, #409cff);
+}
+
+@media(max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 459px) {
+  .container .content .category {
+    flex-direction: column;
+  }
+}
+
+.input-field input,
+select {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.card {
+  position: absolute;
+  margin-left: 380px;
+  background-color: rgb(226, 255, 210);
+  padding: 41px 32px;
+  clip-path: circle(3% at 95% 7%);
+  transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+  cursor: pointer;
+}
+
+.info {
+  position: absolute;
+  top: 13px;
+  right: 38px;
+  text-align: center;
+  font-size: 1.6em;
+  color: #000000;
+  transition: ease-out .3s;
+}
+
+.card:hover {
+  clip-path: circle(80%);
+  border-radius: 20px;
+  box-shadow: 5px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .info {
+  opacity: 0;
+}
