@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles.css">
+    <title>H1B VISA prediction</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <form action="/predict" method="POST">
+        <div class="title"><h2>H1B VISA PREDICTION</h2></div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">AGENT REPRESENTING EMPLOYER</span>
+            <select name="AGENT_REPRESENTING_EMPLOYER" id="AGENT_REPRESENTING_EMPLOYER">
+              <option value="1">Yes</option>
+              <option value="0" selected>No </option>
+              <option disabled selected></option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">SUPPORT H1B</span>
+            <select name="SUPPORT_H1B" id="SUPPORT_H1B">
+              <option value="1">Yes</option>
+              <option value="0" selected>No </option>
+              <option disabled selected></option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">H1B DEPENDENT</span>
+            <select name="H1B_DEPENDENT" id="H1B_DEPENDENT">
+              <option value="1">Yes</option>
+              <option value="0" selected>No </option>
+              <option disabled selected></option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">CONTINUED EMPLOYMENT</span>
+            <input type="text" name="CONTINUED_EMPLOYMENT" id="CONTINUED_EMPLOYMENT" required >
+          </div>
+          <div class="input-box">
+            <span class="details">CHANGE PREVIOUS EMPLOYMENT</span>
+            <input type="text" name="CHANGE_PREVIOUS_EMPLOYMENT" id="CHANGE_PREVIOUS_EMPLOYMENT" required >
+          </div>
+          <div class="input-box">
+            <span class="details">NEW CONCURRENT EMPLOYMENT</span>
+            <input type="text" name="NEW_CONCURRENT_EMPLOYMENT" id="NEW_CONCURRENT_EMPLOYMENT"required >
+          </div>
+          <div class="input-box">
+            <span class="details">CHANGE EMPLOYER</span>
+            <input type="text" name="CHANGE_EMPLOYER" id="CHANGE_EMPLOYER"required >
+          </div>
+          <div class="input-box">
+            <span class="details">AMENDED PETITION</span>
+            <input type="text" name="AMENDED_PETITION" id="AMENDED_PETITION"required >
+          </div>
+          <div class="input-box">
+            <span class="details">WILLFUL VIOLATOR</span>
+            <select name="WILLFUL_VIOLATOR" id="WILLFUL_VIOLATOR" required>
+              <option value="1">Yes</option>
+              <option value="0" selected>No </option>
+              <option disabled selected></option>
+            </select>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Predict ">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="card">
+    <span class="info">&#8505;</span>
+    <p><b>AGENT REPRESENTING EMPLOYER:</b> If another firm is representing the employer and its application.</p>
+    <p><b>SUPPORT H1B:</b> If this application will be used in the future to file for H1-B petitions.</p>
+    <p><b>H-1B DEPENDENT:</b> If an employer is categorized to be H1-B dependent. </p>
+    <p><b>CONTINUED EMPLOYMENT:</b> If this is a re-new visa application.</p>
+    <p><b>CHANGE PREVIOUS EMPLOYMENT:</b> If an application will continue without changes in job duties.</p>
+    <p><b>NEW CONCURRENT EMPLOYMENT:</b> If the applicant will have an additional employer.</p>
+    <p><b>CHANGE EMPLOYER:</b> If applicant will get the visa with a new employer.</p>
+    <p><b>AMENDED PETITION:</b> If an applicant will work with the same employer with changes in duties.</p>
+    <p><b>WILLFUL VIOLATOR:</b> If an employer has violated H1-B rules in the past. </p>
+  </div>
+</body>
+</html>
